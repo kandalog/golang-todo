@@ -8,8 +8,10 @@ Docker を過去に学習したことがあるが、その後全然使ってい�
 1. `git clone <リポジトリ>`
 2. `cd go`
 3. `docker compose build`
-4. `docker compose up -d`
-5. `./script/start`
+4. `docker compose up`
+5. `curl localhost:8080/`
 
-_注意_
-5 で実行できない場合は `chmod 744`を利用して実行権限を変更してください
+## 今後
+
+TODO リストの API を作成する
+一旦 ココイコ の API を Express で作成するためこのリポジトリから離れる
