@@ -8,10 +8,12 @@ import (
 var count int
 
 func main()  {
-	fmt.Println("start")
-	// http.HandleFunc("/", handler)
-	// http.HandleFunc("/get", countHandler)
-	// http.ListenAndServe(":8080", nil)
+	fmt.Println("サーバーを開始します。")
+
+	http.HandleFunc("/", handler)
+	http.HandleFunc("/get", countHandler)
+	
+	http.ListenAndServe(":8080", nil)
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
