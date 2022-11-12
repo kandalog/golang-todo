@@ -6,4 +6,4 @@ RUN apk update && apk add git
 
 COPY . .
 
-# CMD ["go", "run", "main.go"]
+CMD ["go", "run", "main.go"]
