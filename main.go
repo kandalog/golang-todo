@@ -10,7 +10,8 @@ var count int
 func main()  {
 	fmt.Println("サーバーを開始します。")
 
-	http.HandleFunc("/", handler)
+	// http.HandleFunc("/", )
+	http.HandleFunc("/countup", handler)
 	http.HandleFunc("/get", countHandler)
 	
 	http.ListenAndServe(":8080", nil)
@@ -23,5 +24,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func countHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, count)
+	// fmt.Fprintln(w, count)
+	fmt.Fprintln(w, "<html><h1>hoge</h1></html>")
 }
