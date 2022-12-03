@@ -14,6 +14,7 @@ func main()  {
 	http.HandleFunc("/get", countHandler)
 	
 	http.ListenAndServe(":8080", nil)
+	fmt.Println("finish")
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
